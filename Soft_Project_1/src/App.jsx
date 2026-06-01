@@ -6,6 +6,7 @@ import About from "./Pages/About"
 import Contact from "./Pages/Contact"
 import Placements from "./Pages/Placements"
 import Footer from "./Components/Common/Footer"
+import Login from "./Pages/Login"
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
           <Route path="/about" element={<About />}/>
           <Route path="/contact" element={<Contact />}/>
           <Route path="/placements" element={<Placements />}/>
+
+          {/* Login */}
+          <Route path="/login" element={<Login />}/>
         </Routes>
       <Footer />
     </div>

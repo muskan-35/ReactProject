@@ -11,7 +11,7 @@ export const Course = [
         students: 1450,
         format: "Online + Labs",
         badge: "Top Rated",
-        image: "/logo/card/fsjd.webp",
+        image: "/logo/card/java.webp",
         summary:
         "Build production-ready web apps with Java, Spring Boot, React, and SQL.",
     },
@@ -109,6 +109,22 @@ export const Course = [
         badge: "Project Based",
         image: "/logo/card/mobile.webp",
         summary: "Ship Android and iOS apps with Flutter, Firebase, and clean UI.",
+    },
+    {
+        id: "ml-foundations",
+        title: "Machine Learning Foundations",
+        category: "AI",
+        level: "Advanced",
+        duration: "12 weeks",
+        lessons: 44,
+        price: 21999,
+        rating: 4.8,
+        students: 610,
+        format: "Online + Labs",
+        badge: "Pro",
+        image: "/logo/card/ml.webp",
+        summary:
+        "Model training, evaluation, and deployment using real-world datasets.",
     },
     {
         id: "ml-foundations",

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"
-import { Menu, X } from "lucide-react";
+import { LogIn, Menu, X } from "lucide-react";
 
 function Navbar(){
     const [isOpen, setIsOpen] = useState(false);
@@ -35,9 +35,11 @@ function Navbar(){
                     </ul>
 
                     {/* button */}
-                    <button className="bg-blue-500 rounded cursor-pointer px-4 py-1 font-semibold hover:bg-blue-700 transition duration-300 ml-10">
-                        Login
-                    </button>
+                    <Link to="/login">
+                        <button className="bg-blue-500 rounded cursor-pointer px-4 py-1 font-semibold hover:bg-blue-700 transition duration-300 ml-10">
+                            Login
+                        </button>
+                    </Link>
                 </div>
 
                 {/* Mobile Menu Botton */}
@@ -70,9 +72,11 @@ function Navbar(){
                     </ul>
 
                     {/* button Login */}
-                    <button className="bg-yellow-400 text-black px-5 py-3 rounded-xl font-semibold hover:bg-yellow-500 cursor-pointer transition duration-200 mt-5 w-full">
-                        Login
-                    </button>
+                    <Link to="/login">
+                        <button className="bg-yellow-400 text-black px-5 py-3 rounded-xl font-semibold hover:bg-yellow-500 cursor-pointer transition duration-200 mt-5 w-full">
+                            Login
+                        </button>
+                    </Link>
                 </div>
             )}
         </nav>   
