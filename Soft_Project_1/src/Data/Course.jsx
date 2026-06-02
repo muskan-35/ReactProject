@@ -128,19 +128,19 @@ export const Course = [
     },
     {
         id: "ml-foundations",
-        title: "Machine Learning Foundations",
+        title: "Python Development",
         category: "AI",
         level: "Advanced",
-        duration: "12 weeks",
-        lessons: 44,
-        price: 21999,
-        rating: 4.8,
-        students: 610,
+        duration: "10 weeks",
+        lessons: 40,
+        price: 20999,
+        rating: 4.7,
+        students: 600,
         format: "Online + Labs",
         badge: "Pro",
-        image: "/logo/card/ml.webp",
+        image: "/logo/card/python.png",
         summary:
-        "Model training, evaluation, and deployment using real-world datasets.",
+        "Learn Python, model training, evaluation, and deployment using real-world datasets.",
     },
 ]
 

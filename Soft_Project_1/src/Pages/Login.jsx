@@ -31,7 +31,7 @@ function Login(){
 
     return(
         <>
-            <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-100 via-white to-purple-100">
+            <div className="min-h-screen flex items-center justify-center bg-slate-50">
                 <div className="bg-white w-full max-w-md rounded-3xl shadow-2xl p-8">
                     <h1 className="text-center text-2xl font-bold text-green-600 mb-5">Login Form</h1>
 
@@ -59,14 +59,7 @@ function Login(){
                         Login
                     </button>
                 </div> 
-                {/* {
-                    value.map((item, index) => (
-                    <div key={index}>
-                        <p>{item.email}</p>
-                        <p>{item.password}</p>
-                    </div>
-                    ))
-                } */}
+    
             </div>
         </>
     )

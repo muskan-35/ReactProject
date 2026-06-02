@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"
-import { LogIn, Menu, X } from "lucide-react";
+import { LogIn, Menu, X, ChevronDown, Briefcase, MessageSquare, FolderOpen, GraduationCap } from "lucide-react";
 
 function Navbar(){
     const [isOpen, setIsOpen] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
 
    return(
     <>
@@ -29,8 +30,38 @@ function Navbar(){
                         <li className="hover:text-amber-300 cursor-pointer transition duration-300 text-xl">
                             <Link to="/contact">Contact</Link>
                         </li>
-                        <li className="hover:text-amber-300 cursor-pointer transition duration-300 text-xl">
-                            <Link to="/placements">Placements</Link>
+                        
+                        {/* More Dropdown */}
+                        <li className="relative">
+                            <button 
+                                onClick={() => setDropdownOpen(!dropdownOpen)}
+                                className="hover:text-amber-300 cursor-pointer transition duration-300 text-xl flex items-center gap-1"
+                            >
+                                More <ChevronDown size={18} className={`transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} />
+                            </button>
+                            
+                            {dropdownOpen && (
+                                <div className="absolute top-full left-0 mt-2 bg-slate-800 rounded-lg shadow-lg border border-slate-700 z-50 min-w-max">
+                                    <Link to="/placements" onClick={() => setDropdownOpen(false)}>
+                                        <div className="px-4 py-2 hover:bg-slate-700 hover:text-amber-300 transition duration-300 cursor-pointer whitespace-nowrap rounded-t-lg flex items-center gap-3">
+                                            <Briefcase size={18} />
+                                            Placements
+                                        </div>
+                                    </Link>
+                                    <Link to="/projects" onClick={() => setDropdownOpen(false)}>
+                                        <div className="px-4 py-2 hover:bg-slate-700 hover:text-amber-300 transition duration-300 cursor-pointer whitespace-nowrap border-t border-slate-700 flex items-center gap-3">
+                                            <FolderOpen size={18} />
+                                            Projects
+                                        </div>
+                                    </Link>
+                                    <Link to="/internships" onClick={() => setDropdownOpen(false)}>
+                                        <div className="px-4 py-2 hover:bg-slate-700 hover:text-amber-300 transition duration-300 cursor-pointer whitespace-nowrap border-t border-slate-700 rounded-b-lg flex items-center gap-3">
+                                            <GraduationCap size={18} />
+                                            Internships
+                                        </div>
+                                    </Link>
+                                </div>
+                            )}
                         </li>
                     </ul>
 
@@ -66,8 +97,56 @@ function Navbar(){
                         <li className="hover:text-amber-300 cursor-pointer transition duration-300 text-xl">
                             <Link to="/contact">Contact</Link>
                         </li>
-                        <li className="hover:text-amber-300 cursor-pointer transition duration-300 text-xl">
-                            <Link to="/placements">Placements</Link>
+                        
+                        {/* More Dropdown Mobile */}
+                        <li>
+                            <button 
+                                onClick={() => setDropdownOpen(!dropdownOpen)}
+                                className="hover:text-amber-300 cursor-pointer transition duration-300 text-xl flex items-center gap-2 w-full"
+                            >
+                                More <ChevronDown size={18} className={`transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} />
+                            </button>
+                            
+                            {dropdownOpen && (
+                                <div className="mt-2 ml-4 flex flex-col gap-2">
+                                    <Link to="/placements" onClick={() => {
+                                        setDropdownOpen(false);
+                                        setIsOpen(false);
+                                    }}>
+                                        <div className="px-3 py-2 hover:bg-slate-700 hover:text-amber-300 transition duration-300 cursor-pointer rounded flex items-center gap-3">
+                                            <Briefcase size={18} />
+                                            Placements
+                                        </div>
+                                    </Link>
+                                    <Link to="/testimonials" onClick={() => {
+                                        setDropdownOpen(false);
+                                        setIsOpen(false);
+                                    }}>
+                                        <div className="px-3 py-2 hover:bg-slate-700 hover:text-amber-300 transition duration-300 cursor-pointer rounded flex items-center gap-3">
+                                            <MessageSquare size={18} />
+                                            Testimonials
+                                        </div>
+                                    </Link>
+                                    <Link to="/projects" onClick={() => {
+                                        setDropdownOpen(false);
+                                        setIsOpen(false);
+                                    }}>
+                                        <div className="px-3 py-2 hover:bg-slate-700 hover:text-amber-300 transition duration-300 cursor-pointer rounded flex items-center gap-3">
+                                            <FolderOpen size={18} />
+                                            Projects
+                                        </div>
+                                    </Link>
+                                    <Link to="/internships" onClick={() => {
+                                        setDropdownOpen(false);
+                                        setIsOpen(false);
+                                    }}>
+                                        <div className="px-3 py-2 hover:bg-slate-700 hover:text-amber-300 transition duration-300 cursor-pointer rounded flex items-center gap-3">
+                                            <GraduationCap size={18} />
+                                            Internships
+                                        </div>
+                                    </Link>
+                                </div>
+                            )}
                         </li>
                     </ul>
 
