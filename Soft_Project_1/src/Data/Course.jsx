@@ -127,7 +127,7 @@ export const Course = [
         "Model training, evaluation, and deployment using real-world datasets.",
     },
     {
-        id: "ml-foundations",
+        id: "python-development",
         title: "Python Development",
         category: "AI",
         level: "Advanced",

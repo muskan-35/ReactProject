@@ -13,9 +13,9 @@ function Courses(){
     const filteredCourses = useMemo(() =>
         Course.filter(
             (course) =>
-                course.title.toLowerCase().includes(search.toLowerCase())
-                // course.category.toLowerCase().includes(search.toLowerCase()) ||
-                // course.summary.toLowerCase().includes(search.toLowerCase())
+                course.title.toLowerCase().includes(search.toLowerCase())||
+                 course.category.toLowerCase().includes(search.toLowerCase()) ||
+                 course.summary.toLowerCase().includes(search.toLowerCase())
         ),
         [search]
     );
