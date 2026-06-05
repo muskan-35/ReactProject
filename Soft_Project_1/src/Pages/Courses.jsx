@@ -6,9 +6,11 @@ import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import GroupIcon from '@mui/icons-material/Group';
 import CurrencyRupeeSharpIcon from '@mui/icons-material/CurrencyRupeeSharp';
 import { useEffect, useState, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Courses(){
     const [search, setSearch] = useState("");
+    const navigate = useNavigate();
 
     const filteredCourses = useMemo(() =>
         Course.filter(
@@ -114,7 +116,10 @@ function Courses(){
                             </h3>
 
                             {/* Enroll Button */}
-                            <button className="w-full mt-4 bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition">
+                            <button
+                                onClick={() => navigate(`/course/${cours.id}`)}
+                                className="w-full mt-4 bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition"
+                            >
                                 Enroll Now
                             </button>
                         </div>

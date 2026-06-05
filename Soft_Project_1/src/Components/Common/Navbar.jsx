@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"
-import { LogIn, Menu, X, ChevronDown, Briefcase, MessageSquare, FolderOpen, GraduationCap } from "lucide-react";
+import { LogIn, Menu, X, ChevronDown, Briefcase, MessageSquare, FolderOpen, GraduationCap, HelpCircle } from "lucide-react";
 
 function Navbar(){
     const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,7 @@ function Navbar(){
                 {/*Destop Menu */}
                 <div className="hidden md:flex">
                     <ul className="hidden md:flex  items-center gap-8 font-medium">
-                        <li className="hover:text-amber-300 cursor-pointer transition duration-300 text-xl text-blue-600">
+                        <li className="hover:text-amber-400 cursor-pointer transition duration-300 text-xl text-blue-400">
                             <Link to="/">Home</Link>
                         </li>
                         <li className="hover:text-amber-300 cursor-pointer transition duration-300 text-xl">
@@ -48,16 +48,16 @@ function Navbar(){
                                             Placements
                                         </div>
                                     </Link>
-                                    <Link to="/projects" onClick={() => setDropdownOpen(false)}>
+                                    <Link to="/reviews" onClick={() => setDropdownOpen(false)}>
                                         <div className="px-4 py-2 hover:bg-slate-700 hover:text-amber-300 transition duration-300 cursor-pointer whitespace-nowrap border-t border-slate-700 flex items-center gap-3">
-                                            <FolderOpen size={18} />
-                                            Projects
+                                            <MessageSquare size={18} />
+                                            Reviews
                                         </div>
                                     </Link>
-                                    <Link to="/internships" onClick={() => setDropdownOpen(false)}>
+                                    <Link to="/faq" onClick={() => setDropdownOpen(false)}>
                                         <div className="px-4 py-2 hover:bg-slate-700 hover:text-amber-300 transition duration-300 cursor-pointer whitespace-nowrap border-t border-slate-700 rounded-b-lg flex items-center gap-3">
-                                            <GraduationCap size={18} />
-                                            Internships
+                                            <HelpCircle size={18} />
+                                            FAQ
                                         </div>
                                     </Link>
                                 </div>
