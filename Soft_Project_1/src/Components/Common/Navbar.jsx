@@ -99,7 +99,7 @@ function Navbar(){
                         </li>
                         
                         {/* More Dropdown Mobile */}
-                        <li>
+                        <li className="relative">
                             <button 
                                 onClick={() => setDropdownOpen(!dropdownOpen)}
                                 className="hover:text-amber-300 cursor-pointer transition duration-300 text-xl flex items-center gap-2 w-full"
@@ -108,7 +108,7 @@ function Navbar(){
                             </button>
                             
                             {dropdownOpen && (
-                                <div className="absolute top-full left-0 mt-2 bg-slate-800 rounded-lg shadow-lg border border-slate-700 z-50 min-w-max">
+                                <div className="bg-slate-800 rounded-lg shadow-lg border border-slate-700 z-50 mt-2 w-full">
                                     <Link to="/placements" onClick={() => setDropdownOpen(false)}>
                                         <div className="px-4 py-2 hover:bg-slate-700 hover:text-amber-300 transition duration-300 cursor-pointer whitespace-nowrap rounded-t-lg flex items-center gap-3">
                                             <Briefcase size={18} />
