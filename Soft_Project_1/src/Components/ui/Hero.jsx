@@ -94,7 +94,7 @@ function Hero() {
 
                         <div className="grid gap-6 px-6 py-6 md:grid-cols-2">
                             <div className="rounded-3xl bg-white/90 p-6 shadow-sm ring-1 ring-violet-100">
-                                <p className="text-lg font-semibold text-slate-900">Not sure which course is right for you?</p>
+                                <p className="text-lg font-semibold text-slate-900">🚀 Start Your IT Career Today</p>
                                 <p className="mt-3 text-sm text-gray-600">Discover the best path for your career with expert guidance and fast support.</p>
                                 <div className="mt-5 space-y-3 text-sm text-gray-700">
                                     <p>✓ Expert Guidance</p>
@@ -102,8 +102,8 @@ function Hero() {
                                     <p>✓ Course & Fee Details</p>
                                     <p>✓ Quick Response</p>
                                 </div>
-                                <p className="mt-5 text-gray-600 font-medium">
-                                    Start your career journey today!
+                                <p className="mt-3 text-sm text-gray-600">
+                                    Learn in-demand IT skills with practical training, real projects, and placement support.
                                 </p>
                             </div>
 
@@ -122,6 +122,12 @@ function Hero() {
                                             <p>✓ Course Details</p>
                                             <p>✓ Placement Support</p>
                                         </div>
+                                        <button
+                                            onClick={closeModal}
+                                            className="mt-4 rounded-xl bg-violet-500 px-5 py-2 text-white"
+                                        >
+                                            Close
+                                        </button>
                                     </div>
                                 ) : (
                                     <form onSubmit={handleSubmit} className="grid gap-4">
